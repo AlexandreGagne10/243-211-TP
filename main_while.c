@@ -1,9 +1,11 @@
 #include "mcc_generated_files/mcc.h"
 
-#define DEL1 IO_RA0_LAT
-#define DEL2 IO_RA1_LAT
-#define DEL3 IO_RA2_LAT
+// Définition des macros pour les LEDs (DEL en français)
+#define DEL1 IO_RA0_LAT  // Définition pour la LED 1
+#define DEL2 IO_RA1_LAT  // Définition pour la LED 2
+#define DEL3 IO_RA2_LAT  // Définition pour la LED 3
 
+// Initialisation des compteurs pour chaque LED
 int compteur1 = 0;
 int compteur2 = 0;
 int compteur3 = 0;
@@ -17,7 +19,9 @@ void main(void)
    DEL2 = 1;
    DEL3 = 1;
 
+   // Boucle infinie
    while (1) {
+       // Incrementer chaque compteur
        compteur1++;
        compteur2++;
        compteur3++;

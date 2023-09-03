@@ -15,15 +15,13 @@ void main(void) {
     DEL2 = 1;
     DEL3 = 1;
 
-    int compteur1 = 0, compteur2 = 0, compteur3 = 0;
-
     while (1) { // Boucle infinie
         compteur1++;
         compteur2++;
         compteur3++;
 
         // Pour DEL1 (1Hz)
-        for (; compteur1 >= 500; compteur1 = 0) {
+        for (; compteur3 >= 500; compteur3 = 0) {
             DEL3 = !DEL3;
         }
 
@@ -33,7 +31,7 @@ void main(void) {
         }
 
         // Pour DEL3 (4Hz)
-        for (; compteur3 >= 125; compteur3 = 0) {
+        for (; compteur1 >= 125; compteur1 = 0) {
             DEL1 = !DEL1;
         }
         __delay_ms(1);  // Délai de 1ms pour le comptage
